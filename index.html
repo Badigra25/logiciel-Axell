@@ -222,7 +222,9 @@
 
         <div id="registerForm" class="auth-form-container" style="display: none;">
             <h4>S'inscrire</h4>
-            <form id="registerForm" action="https://formspree.io/f/mwpqnrev" method="POST" onsubmit="handleRegister(event)">
+            <form id="registerForm" action="https://formcarry.com/s/AvicB05s_jZ" method="POST">
+                <input type="hidden" name="_redirect" value="https://badigra25.github.io/logiciel-Axell/confirmation.html">
+
                 <div class="form-group">
                     <label for="register-username">ID Utilisateur</label>
                     <input type="text" id="register-username" name="username" required>
@@ -309,6 +311,9 @@
         messageContainer.innerHTML = `<div class="message-box message-${type}">${text}</div>`;
     }
 
+    // Cette fonction n'est plus appelée par le formulaire d'inscription
+    // car nous laissons le formulaire soumettre directement à Formcarry.
+    // Elle peut être retirée si vous n'en avez plus besoin.
     function handleRegister(event) {
         const password = document.getElementById('register-password').value;
         const confirmPassword = document.getElementById('register-confirm-password').value;
